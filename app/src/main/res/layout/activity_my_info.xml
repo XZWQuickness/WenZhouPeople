@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar_tv" />
+
+    <LinearLayout
+        android:id="@+id/layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_20">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="会员头像"
+            android:textColor="@color/black" />
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/icon_head"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/margin_15"
+            fresco:failureImage="@mipmap/icon_default_head"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImage="@mipmap/icon_default_head"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:progressBarAutoRotateInterval="5000"
+            fresco:progressBarImage="@mipmap/icon_default_head"
+            fresco:progressBarImageScaleType="centerInside"
+            fresco:retryImage="@mipmap/icon_default_head"
+            fresco:retryImageScaleType="centerCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="@color/white"
+            fresco:roundingBorderWidth="2dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_right_gray_next" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="@color/lin_gray" />
+
+    <LinearLayout
+        android:id="@+id/layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="13dp"
+            android:text="会员名称"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@mipmap/ic_right_gray_next"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:layout_marginEnd="@dimen/margin_5"
+             />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="@color/lin_gray" />
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/layout_sex"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/white"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:padding="13dp"-->
+            <!--android:text="性别"-->
+            <!--android:textColor="@color/black" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/gender"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:drawableEnd="@mipmap/ic_right_gray_next"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:padding="13dp"-->
+            <!--android:text="男" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/margin_0.5"-->
+        <!--android:layout_marginStart="@dimen/dp_10"-->
+        <!--android:background="@color/lin_gray" />-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/my"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/white"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:padding="13dp"-->
+            <!--android:text="我的二维码"-->
+            <!--android:textColor="@color/black" />-->
+
+
+        <!--<ImageView-->
+            <!--android:id="@+id/two"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:background="@color/green"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:drawableEnd="@mipmap/ic_right_gray_next"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:padding="@dimen/dp_10"-->
+            <!--android:layout_marginEnd="@dimen/margin_3"-->
+            <!--/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/margin_0.5"-->
+        <!--android:layout_marginStart="@dimen/dp_10"-->
+        <!--android:background="@color/lin_gray" />-->
+</LinearLayout>

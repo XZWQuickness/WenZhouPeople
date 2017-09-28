@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        android:id="@+id/swipeLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/item_gouwuch"></include>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@color/red_fc363b"
+            android:text="删除"
+            android:textColor="@android:color/white" />
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+</LinearLayout>

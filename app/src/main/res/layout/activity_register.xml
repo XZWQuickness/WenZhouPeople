@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar_tv"></include>
+
+    <View
+        style="@style/login_line"
+        android:layout_marginTop="20dp"></View>
+
+    <EditText
+        android:id="@+id/edNickname"
+        style="@style/login_edit_style"
+        android:visibility="gone"
+        android:drawableStart="@mipmap/icon_register_nickname"
+        android:hint="请输入昵称(不超过20个字符)"
+        android:inputType="textPassword"
+        android:maxLength="20" />
+
+    <View style="@style/login_line"></View>
+
+    <EditText
+        android:id="@+id/edPhone"
+        style="@style/login_edit_style"
+        android:drawableStart="@mipmap/ic_code"
+        android:hint="请输入手机号"
+        android:inputType="phone" />
+
+    <View style="@style/login_line"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/edCode"
+            style="@style/login_edit_style"
+            android:layout_weight="1"
+            android:drawableStart="@mipmap/icon_login_password"
+            android:hint="短信验证码" />
+
+        <TextView
+            android:id="@+id/code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/shape_login_blue_all"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="获取验证码"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View style="@style/login_line"></View>
+
+    <EditText
+        android:id="@+id/edPwd1"
+        style="@style/login_edit_style"
+        android:drawableStart="@mipmap/icon_login_password"
+        android:hint="请输入6-20位密码"
+        android:inputType="textPassword"
+        android:maxLength="20" />
+
+    <View style="@style/login_line"></View>
+
+
+    <EditText
+        android:id="@+id/edPwd2"
+        style="@style/login_edit_style"
+        android:drawableStart="@mipmap/icon_login_password"
+        android:hint="请再次输入密码"
+        android:inputType="textPassword" />
+
+    <View style="@style/login_line"></View>
+
+    <EditText
+        android:id="@+id/edPhone2"
+        style="@style/login_edit_style"
+        android:drawableStart="@mipmap/icon_register_phone"
+        android:hint="请输入推荐人手机号"
+        android:visibility="gone"
+        android:inputType="textPassword" />
+
+    <View style="@style/login_line"></View>
+
+    <LinearLayout
+        android:id="@+id/fwxy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@drawable/selector_register_check"
+            android:checked="true"
+            android:drawablePadding="10dp"
+            android:text="  阅读并同意"
+            android:textColor="@color/text_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="《服务协议》"
+            android:textColor="@color/blue2"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_15"
+        android:layout_marginStart="@dimen/margin_15"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_login_blue_all"
+        android:text="注册去登录"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</LinearLayout>

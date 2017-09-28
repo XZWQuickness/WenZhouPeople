@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/llLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_vertical"
+        android:layout_toStartOf="@id/select"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:minEms="5"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone"
+            android:maxLength="11"
+            android:minEms="6"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/type"
+            android:background="@drawable/shape_login_blue_lin"
+            android:maxLength="11"
+            android:visibility="gone"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:layout_marginStart="5dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/blue2"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <TextView
+        android:layout_below="@id/llLay"
+        android:layout_toStartOf="@id/select"
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/text_gray"
+        android:textSize="14sp" />
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbarSearch"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="#F9F9F9">
+
+    <RelativeLayout
+        android:id="@+id/parent_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/mLeftImgSearch"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_back"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/btSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/shape_login_blue_all"
+            android:padding="10dp"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_toEndOf="@id/mLeftImgSearch"
+            android:layout_toStartOf="@id/btSearch"
+            android:background="@drawable/shape_gray_all"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:drawableEnd="@mipmap/ic_serach_sanjiao"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:text="单品"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/edSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:paddingStart="10dp" />
+            <TextView
+                android:id="@+id/tvSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:paddingStart="10dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>
+

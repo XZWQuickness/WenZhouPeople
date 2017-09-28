@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:padding="15dp"
+    android:layout_marginTop="1dp"
+    android:text="领取优惠券"
+    android:textSize="14sp"
+    android:textColor="@color/text_gray"
+    android:drawableStart="@mipmap/ic_gwc_ticket"
+    android:drawablePadding="10dp"
+    android:gravity="center_vertical"
+    android:drawableEnd="@mipmap/ic_right_gray_next"
+    android:id="@+id/Coupon"
+    android:layout_height="wrap_content">
+</TextView>

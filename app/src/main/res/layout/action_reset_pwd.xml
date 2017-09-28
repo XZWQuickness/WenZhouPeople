@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar_tv" />
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin_25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="13dp"
+            android:text="原密码"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/black" />
+
+
+        <cn.com.szw.lib.myframework.view.ClearWriteEditText
+            android:layout_width="match_parent"
+            android:id="@+id/pwd"
+            android:hint="原密码"
+            android:textSize="@dimen/sp_14"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="13dp"
+            android:text="新密码"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/black" />
+
+
+        <cn.com.szw.lib.myframework.view.ClearWriteEditText
+            android:layout_width="match_parent"
+            android:id="@+id/new_pwd"
+            android:hint="新密码"
+            android:textSize="@dimen/sp_14"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="13dp"
+            android:text="新密码"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/black" />
+
+
+        <cn.com.szw.lib.myframework.view.ClearWriteEditText
+            android:layout_width="match_parent"
+            android:id="@+id/new_pwd_again"
+            android:hint="再输入一次新密码"
+            android:textSize="@dimen/sp_14"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/sure"
+        android:text="确认修改"
+        android:textColor="@color/white"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/shape_login_blue_all"/>
+</LinearLayout>

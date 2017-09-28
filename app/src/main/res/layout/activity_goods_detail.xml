@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar_tv"></include>
+    <LinearLayout
+        android:id="@+id/llLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/collect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@mipmap/ic_goods_detail_star_gray"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="收藏"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/gwc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@mipmap/ic_goods_detail_gwc_gray"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="购物车"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/addGWC"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/blue2"
+            android:gravity="center"
+            android:text="加入购购物车"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <com.exz.wenzhoupeople.utils.ScrollViewPager
+        android:id="@+id/mScrollViewPager"
+        android:layout_above="@id/llLay"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>

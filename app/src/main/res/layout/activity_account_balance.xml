@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar_tv" />
+
+    <TextView
+        android:background="@color/white"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我的可用余额（元）"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/wallet" />
+
+        <TextView
+            android:id="@+id/wallet_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wallet"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="¥ 10000"
+            android:textColor="@color/blue2"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/recharge_money"
+            android:layout_width="50dp"
+            android:layout_height="27dp"
+            android:layout_below="@id/wallet_money"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_login_blue_all"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="充值"
+            android:textColor="@color/white"
+
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/item2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/apply_deposit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="17dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:text="申请提现"
+                android:textColor="@color/text_gray"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/next1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:src="@mipmap/ic_right_gray_next" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:background="@color/lin_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/biandong"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="17dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:text="余额变更记录"
+                android:textColor="@color/text_gray"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:src="@mipmap/ic_right_gray_next" />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:background="@color/lin_gray" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

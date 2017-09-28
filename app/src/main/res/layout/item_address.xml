@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_marginStart="@dimen/margin_7"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_0.5"
+            android:background="@color/lin_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/margin_5"
+            android:paddingEnd="@dimen/margin_10"
+            android:paddingStart="@dimen/margin_10">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="测试"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18951351188"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/Gray"
+            android:text="江苏省泉山区 淮海西路120号 颖都大厦 1f 1106 电脑就能到三年时间打开难道是你的" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginEnd="@dimen/margin_10"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_right_gray_next"/>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <com.jude.rollviewpager.RollPagerView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="140dp" />
+
+    <View style="@style/lin"></View>
+
+    <RadioGroup
+        android:id="@+id/rb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        >
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:text="500元拼装包"
+            android:checked="true"
+            style="@style/rb_seafooter_pzb_style" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:text="800元拼装包"
+            style="@style/rb_seafooter_pzb_style" />
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:text="1000元拼装包"
+            style="@style/rb_seafooter_pzb_style"/>
+
+    </RadioGroup>
+
+    <View style="@style/lin"></View>
+
+</LinearLayout>

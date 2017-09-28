@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar_tv"></include>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/img1"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/ic_hxdp"
+        android:scaleType="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:text="海鲜单品"
+        tools:background="@color/red"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/img2"
+        android:src="@mipmap/ic_hxpzb"
+        android:scaleType="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center"
+        android:text="海鲜拼装包"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+</LinearLayout>

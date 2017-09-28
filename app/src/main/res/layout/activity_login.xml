@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/action_bar_tv"></include>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="40dp"
+                android:background="@mipmap/login_bg" />
+
+            <View style="@style/login_line"></View>
+
+            <EditText
+                android:id="@+id/edPhone"
+                style="@style/login_edit_style"
+                android:drawableStart="@mipmap/icon_register_phone"
+                android:hint="请输入手机号"
+                android:inputType="number" />
+
+            <View style="@style/login_line"></View>
+
+            <View
+                style="@style/login_line"
+                android:layout_marginTop="@dimen/dp_10"></View>
+
+            <EditText
+                android:id="@+id/edPassword"
+                style="@style/login_edit_style"
+                android:drawableStart="@mipmap/icon_login_password"
+                android:hint="请输入登录密码"
+                android:inputType="textPassword" />
+
+            <View style="@style/login_line"></View>
+
+            <Button
+                android:id="@+id/btLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/shape_login_blue_all"
+                android:text="登录"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvForgetPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="15dp"
+                android:text="忘记密码?" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/icon_login_line_right"
+                    android:drawableStart="@mipmap/icon_login_line_left"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="选择登录方式" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="25dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/wechat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/margin_15"
+                        android:drawableTop="@mipmap/icon_login_wechat"
+                        android:gravity="center"
+                        android:text="微信"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/qq"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/margin_15"
+                        android:drawableTop="@mipmap/icon_login_qq"
+                        android:gravity="center"
+                        android:onClick="buttonLogin"
+                        android:text="QQ"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/sp_14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

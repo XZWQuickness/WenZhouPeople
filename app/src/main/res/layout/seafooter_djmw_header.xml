@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+<LinearLayout
+    android:id="@+id/llSuspensionHeight"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_djmw_banner_bg" />
+
+        <com.jude.rollviewpager.RollPagerView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="60dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+</LinearLayout>
+    <com.flyco.tablayout.CommonTabLayout xmlns:tl="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mainTabBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        tl:tl_iconHeight="23dp"
+        tl:tl_iconWidth="23dp"
+        tl:tl_indicator_color="@color/blue2"
+        tl:tl_textSelectColor="@color/blue2"
+        tl:tl_textUnselectColor="#66000000"
+        tl:tl_textsize="12sp"
+        tl:tl_underline_color="#DDDDDD"
+        tl:tl_underline_height="1dp" />
+
+</LinearLayout>

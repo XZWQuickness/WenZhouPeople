@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbarSpecialty"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:visibility="gone"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/parent_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center">
+
+
+
+        <ImageView
+            android:id="@+id/mLeftImgSpecialty"
+            tools:ignore="ContentDescription"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="center"
+            android:src="@mipmap/icon_back" />
+
+
+        <RadioGroup
+            android:id="@+id/rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="5dp"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/rb1"
+                style="@style/prescibe_rb"
+                android:checked="true"
+                android:background="@drawable/selector_specialty_left"
+                android:text="家乡食材" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                style="@style/prescibe_rb"
+                android:background="@drawable/selector_specialty_right"
+                android:text="风味美食" />
+        </RadioGroup>
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

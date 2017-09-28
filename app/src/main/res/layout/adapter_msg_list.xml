@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="11"
+        android:textColor="@color/text_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="@dimen/margin_15"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:maxLines="1"
+            android:text="11"
+            android:textColor="@color/text_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@drawable/goods_detail_classify"
+                app:placeholderImageScaleType="fitCenter"
+                app:progressBarAutoRotateInterval="5000"
+                app:progressBarImage="@mipmap/icon_empty"
+                app:progressBarImageScaleType="centerInside"
+                app:retryImage="@mipmap/icon_empty"
+                app:retryImageScaleType="centerCrop"
+                app:roundingBorderColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/subTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:maxLines="3"
+                android:text="11"
+                android:textColor="@color/text_gray" />
+        </LinearLayout>
+
+        <View
+            style="@style/lin"
+            android:layout_marginTop="@dimen/dp_10"></View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:drawableEnd="@mipmap/ic_main_msg_right_next"
+            android:text="查看详情" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        android:visibility="gone"
+        android:background="@color/app_bg"></View>
+
+</LinearLayout>

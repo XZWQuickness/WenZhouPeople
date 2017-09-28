@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/llLay1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rb1_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="全部评价"
+                android:textColor="@color/blue2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/rb1_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:button="@null"
+                android:text="0"
+                android:textColor="@color/blue2"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLay2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rb2_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+
+                android:text="好评"
+                android:textColor="@color/color_evaluate_text"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/rb2_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:button="@null"
+
+                android:text="0"
+                android:textColor="@color/color_evaluate_text"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLay3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rb3_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+
+                android:text="中评"
+                android:textColor="@color/color_evaluate_text"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/rb3_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:button="@null"
+
+                android:text="0"
+                android:textColor="@color/color_evaluate_text"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLay4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rb4_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+
+                android:text="差评"
+                android:textColor="@color/color_evaluate_text"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/rb4_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:button="@null"
+
+                android:text="0"
+                android:textColor="@color/color_evaluate_text"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLay5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rb5_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+
+                android:text="晒图"
+                android:textColor="@color/color_evaluate_text"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/rb5_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:button="@null"
+
+                android:text="0"
+                android:textColor="@color/color_evaluate_text"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </LinearLayout>

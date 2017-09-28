@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/orderNum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_14"
+            android:textColor="@color/text_gray"
+            android:text="订单编号" />
+
+        <TextView
+            android:id="@+id/orderState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_14"
+            android:textColor="@color/red_fc363b"
+            android:text="订单编号" />
+    </LinearLayout>
+
+    <View style="@style/lin"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:paddingTop="@dimen/dp_10"
+            android:text="￥199"
+            android:textColor="@color/text_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:paddingTop="@dimen/dp_10"
+            android:text="￥199"
+            android:textColor="@color/blue2"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View style="@style/lin"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/btLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@drawable/shape_gray_lin"
+            android:minEms="3"
+            android:text="左边按钮"
+            android:paddingBottom="5dp"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_login_blue_all"
+            android:minEms="3"
+            android:text="右边按钮"
+            android:paddingBottom="5dp"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

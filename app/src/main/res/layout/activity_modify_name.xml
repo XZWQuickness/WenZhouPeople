@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar_tv" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/margin_15"
+        android:background="@color/white"
+        android:padding="@dimen/margin_15">
+
+
+        <cn.com.szw.lib.myframework.view.ClearWriteEditText
+            android:id="@+id/modify_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="修改昵称"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:singleLine="true"
+            android:textSize="15sp"
+
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/margin_50"
+        android:background="@drawable/shape_login_blue_all"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+</LinearLayout>

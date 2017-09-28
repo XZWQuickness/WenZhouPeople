@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:xlhRatingBar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_10"
+        android:orientation="horizontal">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pic"
+            android:background="@color/black"
+            android:layout_width="85dp"
+            android:layout_height="85dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="贤惠零下的范德萨范德萨发名单三鹿奶粉都说了辅导老师开发阶段上课了附近开了打扫房间卡兰蒂斯金风科技单身快乐附近开了 "
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16" />
+
+
+
+                <com.example.xlhratingbar_lib.XLHRatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    xlhRatingBar:canEdit="true"
+                    xlhRatingBar:countSelected="5"
+                    xlhRatingBar:dividerWidth="2dp"
+                    xlhRatingBar:starCount="5"
+                    android:layout_marginTop="@dimen/dp_10"
+                    xlhRatingBar:stateResId="@drawable/comment_ratingbar_selector"
+                    xlhRatingBar:widthAndHeight="15dp" />
+
+            <TextView
+                android:id="@+id/evaluate"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/text_gray"
+                android:text="快递很快，宝贝是正品！"/>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:textSize="@dimen/sp_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textGary"
+                    android:text="评价时间："/>
+                <TextView
+                    android:id="@+id/dataTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text_gray"
+                    android:text="2018-09-09"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="@dimen/margin_10"
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

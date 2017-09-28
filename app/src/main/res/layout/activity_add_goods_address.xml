@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar_tv"></include>
+
+    <LinearLayout
+        android:id="@+id/llLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:minEms="4"
+                android:text="收货人姓名:"
+                android:textColor="@color/text_gray" />
+
+            <cn.com.szw.lib.myframework.view.ClearWriteEditText
+                android:id="@+id/name"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:maxLength="8"
+                style="@style/ed_add_goods_address_style" />
+        </LinearLayout>
+
+        <View
+            style="@style/lin"
+            android:layout_marginStart="@dimen/margin_15"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:minEms="4"
+                android:text="手机号码:"
+                android:textColor="@color/text_gray" />
+
+            <cn.com.szw.lib.myframework.view.ClearWriteEditText
+                android:id="@+id/phone"
+                style="@style/ed_add_goods_address_style"
+                android:inputType="number"
+                android:maxLength="11"></cn.com.szw.lib.myframework.view.ClearWriteEditText>
+        </LinearLayout>
+        <View
+            style="@style/lin"
+            android:layout_marginStart="@dimen/margin_15"></View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:minEms="4"
+                android:text="所在地区:"
+                android:textColor="@color/text_gray" />
+
+            <TextView
+                android:id="@+id/address"
+                style="@style/ed_add_goods_address_style"
+                android:drawableEnd="@mipmap/ic_right_gray_next"
+                android:hint="" />
+        </LinearLayout>
+        <View
+            style="@style/lin"
+            android:layout_marginStart="@dimen/margin_15"></View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:minEms="4"
+                android:text="详情地址:"
+                android:textColor="@color/text_gray" />
+
+            <cn.com.szw.lib.myframework.view.ClearWriteEditText
+                android:id="@+id/addressDetail"
+                style="@style/ed_add_goods_address_style"
+                android:maxLines="1"
+                android:hint="" />
+        </LinearLayout>
+        <View
+            style="@style/lin"
+            android:layout_marginStart="@dimen/margin_15"></View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minEms="4"
+                android:text="地址类型:"
+                android:textColor="@color/text_gray" />
+
+            <CheckBox
+                android:id="@+id/cb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:button="@drawable/selector_gwcr_check"
+                android:text="    公司"
+                android:textColor="@color/text_gray" />
+
+            <CheckBox
+                android:id="@+id/cb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:button="@drawable/selector_gwcr_check"
+                android:text="    家"
+                android:textColor="@color/text_gray" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llLay"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minEms="4"
+            android:text="设置默认地址:"
+            android:textColor="@color/text_gray" />
+
+        <CheckBox
+            android:id="@+id/cb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:button="@null"
+            android:drawableEnd="@drawable/selector_address_check" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View style="@style/lin"></View>
+
+        <TextView
+            android:id="@+id/addAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/shape_login_blue_all"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>

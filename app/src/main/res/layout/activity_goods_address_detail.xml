@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar_tv"></include>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/llBottomLay"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minEms="5"
+                android:padding="15dp"
+                android:text="收货人"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <cn.com.szw.lib.myframework.view.ClearWriteEditText
+                android:id="@+id/tvName"
+                android:layout_marginStart="@dimen/margin_7"
+                style="@style/ed_add_goods_address_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收货人"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minEms="4"
+                android:padding="15dp"
+                android:text="手机号码"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <cn.com.szw.lib.myframework.view.ClearWriteEditText
+                android:id="@+id/tvPhone"
+                style="@style/ed_add_goods_address_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13236028899"
+                android:inputType="phone"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+        <!--<LinearLayout-->
+        <!--android:id="@+id/llType"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="1dp"-->
+        <!--android:background="@color/white"-->
+        <!--android:padding="15dp">-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:minEms="4"-->
+        <!--android:text="地址类型"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="14sp" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tvType"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/text_gray"-->
+        <!--android:textSize="14sp" />-->
+
+        <!--</LinearLayout>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minEms="4"
+                android:padding="15dp"
+                android:text="所在地区"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                style="@style/ed_add_goods_address_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="江苏省徐州市"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minEms="4"
+                android:padding="15dp"
+                android:text="详细地址"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <cn.com.szw.lib.myframework.view.ClearWriteEditText
+                android:id="@+id/tvAddressDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_15"
+                android:text="淮海西路108号颖都大厦1106"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lin_gray" />
+
+        <LinearLayout
+            android:id="@+id/llType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minEms="4"
+                android:text="地址类型:"
+                android:textColor="@color/text_gray" />
+
+            <CheckBox
+                android:id="@+id/cb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:button="@drawable/selector_gwcr_check"
+                android:text="    公司"
+                android:textColor="@color/text_gray" />
+
+            <CheckBox
+                android:id="@+id/cb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:button="@drawable/selector_gwcr_check"
+                android:text="    家"
+                android:textColor="@color/text_gray" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/margin_15"
+                android:text="设为默认地址" />
+
+
+            <CheckBox
+                android:id="@+id/default_box"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:background="@drawable/selector_gwcr_check"
+                android:button="@null" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@color/white"
+            android:padding="@dimen/margin_15"
+            android:text="删除地址"
+            android:textColor="@color/red" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

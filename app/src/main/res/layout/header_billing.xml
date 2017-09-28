@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/bt_Address"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/consigneeText"
+        android:text="收货人："
+        android:textColor="@color/black_333333"
+        android:textSize="@dimen/sp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/margin_15" />
+    <TextView
+        android:id="@+id/consignee"
+        android:text="未填写"
+        android:textColor="@color/black_333333"
+        android:textSize="@dimen/sp_16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:ellipsize="end"
+        app:layout_constraintLeft_toRightOf="@+id/consigneeText"
+        app:layout_constraintRight_toLeftOf="@+id/right"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/consigneeText" />
+    <TextView
+        android:id="@+id/address"
+        android:text="收货地址：未填写"
+        android:textColor="@color/MaterialGrey700"
+        android:textSize="@dimen/sp_14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@+id/consigneeText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/margin_15"
+        app:layout_constraintRight_toLeftOf="@+id/right"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintVertical_bias="0.0" />
+    <ImageView
+        android:id="@+id/right"
+        android:src="@mipmap/ic_right_gray_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp" />
+</android.support.constraint.ConstraintLayout>
+    <View
+        android:background="@mipmap/icon_billing_address_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_5"/>
+    <TextView
+        android:background="@color/white"
+        android:text="商品信息"
+        android:padding="@dimen/margin_15"
+        android:textColor="@color/black_333333"
+        android:textSize="@dimen/sp_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.greenrobot.greendao'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.exz.wenzhoupeople"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    greendao {
+        schemaVersion 1
+        daoPackage 'com.exz.wenzhoupeople.greendao.gen'
+        targetGenDir 'src/main/java'
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '26.0.0-alpha1'
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.github.NW0LC:MyFramework:1.0.20'
+    compile 'com.yanzhenjie:permission:latest.release'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    compile 'org.greenrobot:greendao:+'
+    compile 'org.greenrobot:greendao-generator:+'
+    //图片压缩
+    compile 'top.zibin:Luban:+'
+
+
+    compile 'com.github.hotchemi:permissionsdispatcher:3.0.0@aar'
+}

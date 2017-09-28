@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+<include layout="@layout/action_bar_tv"></include>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/refresh_recycler"></include>
+        <RadioGroup
+            android:id="@+id/rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:padding="15dp"
+            >
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:text="500元拼装包"
+                android:checked="true"
+                style="@style/rb_seafooter_pzb_style" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:text="800元拼装包"
+                style="@style/rb_seafooter_pzb_style" />
+
+            <RadioButton
+                android:id="@+id/rb3"
+                android:text="1000元拼装包"
+                style="@style/rb_seafooter_pzb_style"/>
+
+        </RadioGroup>
+    </RelativeLayout>
+
+</LinearLayout>

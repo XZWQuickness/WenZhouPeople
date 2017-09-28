@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/rlSerach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue2"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="新鲜海货"
+            android:drawablePadding="10dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_shallow_gray"
+            android:drawableStart="@mipmap/ic_main_search"
+            android:background="@drawable/shape_main_white_all"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="15dp"
+            android:drawableTop="@mipmap/ic_main_msg"
+            android:gravity="center"
+            android:text="消息"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+   <include layout="@layout/refresh_recycler"></include>
+</LinearLayout>

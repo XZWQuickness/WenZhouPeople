@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xlhRatingBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/goods_detail_classify"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderImage="@mipmap/icon_load_default"
+                app:placeholderImageScaleType="centerInside" />
+
+            <TextView
+
+                android:id="@+id/goodsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="发布评价"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/lin"
+            android:layout_marginStart="15dp"/>
+
+        <EditText
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text=""
+            android:hint="请认真填写评价内容(不超过200字)"
+            android:minHeight="120dp"
+            android:padding="15dp"
+            android:textColor="@color/text_gray"
+            android:textColorHint="@color/text_shallow_gray"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp" />
+
+        <View
+            style="@style/lin"
+            android:layout_marginStart="15dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="商品评分" />
+
+            <com.example.xlhratingbar_lib.XLHRatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                xlhRatingBar:canEdit="true"
+                xlhRatingBar:countSelected="5"
+                xlhRatingBar:dividerWidth="5dp"
+                xlhRatingBar:starCount="5"
+                xlhRatingBar:stateResId="@drawable/comment_ratingbar_selector"
+                xlhRatingBar:widthAndHeight="20dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/action_bar_tv"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:padding="@dimen/margin_15"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_mine_setting_phone"
+                />
+
+            <cn.com.szw.lib.myframework.view.ClearWriteEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:singleLine="true"
+                android:inputType="number"
+                android:textSize="@dimen/sp_14"
+                android:hint="请输入11位手机号"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginStart="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_0.5"
+            android:background="@color/lin_gray"/>
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:padding="@dimen/margin_15"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_mine_settings_red"
+                />
+
+            <cn.com.szw.lib.myframework.view.ClearWriteEditText
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:singleLine="true"
+                android:inputType="number"
+                android:textSize="@dimen/sp_14"
+                android:hint="请输入6位短信验证码"
+                />
+
+            <Button
+                android:id="@+id/btn_code"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:background="@drawable/settings_blue_ground"
+                android:text="获取验证码"
+                android:textColor="@color/blue2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sure"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/shape_login_blue_all"/>
+
+
+</LinearLayout>
