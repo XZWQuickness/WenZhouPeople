@@ -8,7 +8,7 @@ public class Urls {
 
     public static String APP_ID = "";
 
-    public static String url = "http://wzxcth.com/";
+    public static String url = "http://ht.wzxcth.com/";
 
 
 //    public static String url = "http://qxw1649650091.my3w.com/";
