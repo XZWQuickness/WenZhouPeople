@@ -1,6 +1,5 @@
 package com.exz.wenzhoupeople.adapter;
 
-import android.content.Intent;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -18,12 +17,6 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import cn.com.szw.lib.myframework.utils.preview.PreviewActivity;
-
-import static cn.com.szw.lib.myframework.utils.preview.PreviewActivity.PREVIEW_INTENT_IMAGES;
-import static cn.com.szw.lib.myframework.utils.preview.PreviewActivity.PREVIEW_INTENT_IS_CAN_DELETE;
-import static cn.com.szw.lib.myframework.utils.preview.PreviewActivity.PREVIEW_INTENT_POSITION;
-import static cn.com.szw.lib.myframework.utils.preview.PreviewActivity.PREVIEW_INTENT_SHOW_NUM;
 
 /**
  * Created by weicao on 2017/2/10.
@@ -54,20 +47,6 @@ public class EvaluateAdapter extends BaseQuickAdapter<EvaluateModel, BaseViewHol
         v.recyclerView.setLayoutManager(layoutManager);
         adapter.setNewData(item.getImages());
         v.recyclerView.setAdapter(adapter);
-        if (item.getImages() != null && item.getImages().size() > 0) {
-            v.recyclerView.addOnItemTouchListener(new com.chad.library.adapter.base.listener.OnItemClickListener() {
-                @Override
-                public void onSimpleItemClick(BaseQuickAdapter adapter, View view, int position) {
-                    ArrayList<String> list = (ArrayList<String>) item.getImages();
-                    Intent intent = new Intent(mContext, PreviewActivity.class);
-                    intent.putExtra(PREVIEW_INTENT_POSITION, position);
-                    intent.putExtra(PREVIEW_INTENT_SHOW_NUM, true);
-                    intent.putExtra(PREVIEW_INTENT_IMAGES, list);
-                    intent.putExtra(PREVIEW_INTENT_IS_CAN_DELETE, false);
-                    mContext.startActivity(intent);
-                }
-            });
-        }
     }
 
 
