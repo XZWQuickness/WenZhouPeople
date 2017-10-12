@@ -1,5 +1,6 @@
 package com.exz.wenzhoupeople.activity.pay
 
+import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
 import cn.com.szw.lib.myframework.app.MyApplication
@@ -17,6 +18,7 @@ import com.exz.wenzhoupeople.config.Urls
 import com.lzy.okgo.OkGo
 import com.lzy.okgo.model.Response
 import com.tencent.mm.opensdk.modelpay.PayReq
+import com.tencent.mm.opensdk.openapi.IWXAPI
 import com.tencent.mm.opensdk.openapi.WXAPIFactory
 import io.reactivex.Flowable
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -30,7 +32,11 @@ import java.util.*
  */
 
 abstract class PayActivity : BaseActivity() {
-    private val msgApi = WXAPIFactory.createWXAPI(mContext, null)
+    lateinit var msgApi: IWXAPI
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        msgApi = WXAPIFactory.createWXAPI(mContext, null)
+    }
     //    @Subscribe(thread = EventThread.MAIN_THREAD, tags = {@Tag(Pay_Finish)})
     //    public void PayFinish(String tag) {
     //        finish();
@@ -42,6 +48,7 @@ abstract class PayActivity : BaseActivity() {
             msgApi.registerApp(Urls.APP_ID)
             return msgApi.isWXAppInstalled && msgApi.isWXAppSupportAPI
         }
+
 
     // 微信支付
     protected fun WeChatPay(url: String, key: String, value: String) {
