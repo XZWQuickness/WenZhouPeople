@@ -26,9 +26,9 @@ import com.exz.wenzhoupeople.entity.EnshrineModel;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -40,6 +40,7 @@ import cn.com.szw.lib.myframework.utils.net.NetEntity;
 import cn.com.szw.lib.myframework.utils.net.callback.DialogCallback;
 import cn.com.szw.lib.myframework.view.CustomLoadMoreView;
 
+import static com.exz.wenzhoupeople.config.Urls.CollectAction;
 import static com.exz.wenzhoupeople.config.Urls.CollectList;
 
 /**
@@ -95,7 +96,6 @@ public class EnshrineActivity extends BaseActivity implements SwipeRefreshLayout
     public int refreshState = Constants.RefreshState.STATE_REFRESH;
     private SelectQuestionListsAdapter adapter;
 
-    private List<EnshrineModel> list = new ArrayList();
 
     @Override
     public boolean initToolbar() {
@@ -139,20 +139,10 @@ public class EnshrineActivity extends BaseActivity implements SwipeRefreshLayout
         adapter.setOnLoadMoreListener(this, recyclerView);
         refresh.setOnRefreshListener(this);
         adapter.setEmptyView(LayoutInflater.from(mContext).inflate(R.layout.view_empty, new RelativeLayout(mContext), false));
-        adapter.setNewData(list);
         adapter.setOnDelListener(new SelectQuestionListsAdapter.onSwipeListener() {
             @Override
             public void onDel(final int pos) {
-                if (pos >= 0 && pos < list.size()) {
-//                    initDelete(dataList.get(pos).getHomeworkPaperId());
-
-
-                    list.remove(pos);
-                    adapter.notifyItemRemoved(pos);//推荐用这个
-                    //如果删除时，不使用mAdapter.notifyItemRemoved(pos)，则删除没有动画效果，
-                    //且如果想让侧滑菜单同时关闭，需要同时调用 ((CstSwipeDelMenu) holder.itemView).quickClose();
-//                    mAdapter.notifyDataSetChanged();
-                }
+                cancel(adapter.getData().get(pos).getId(),pos);
             }
 
 
@@ -171,6 +161,34 @@ public class EnshrineActivity extends BaseActivity implements SwipeRefreshLayout
             }
         });
 
+    }
+    public void cancel(String goodsId,final int pos){
+        Map<String, String> map = new HashMap<>();
+        map.put("id", App.getLoginUserId());
+        map.put("goodsId", goodsId);
+        map.put("type", "0");
+        map.put("requestCheck", EncryptUtils.encryptMD5ToString(App.getLoginUserId() + goodsId, App.salt)
+                .toLowerCase());
+        OkGo.<NetEntity<String>>post(CollectAction).params(map).tag(this).execute(new DialogCallback<NetEntity<String>>(mContext) {
+            @Override
+            public void onSuccess(Response<NetEntity<String>> response) {
+                if (response.body().getCode() == Constants.NetCode.SUCCESS) {
+                    if (pos >= 0 && pos < adapter.getData().size()) {
+//                    initDelete(dataList.get(pos).getHomeworkPaperId());
+
+
+                        adapter.getData().remove(pos);
+                        adapter.notifyItemRemoved(pos);//推荐用这个
+                        //如果删除时，不使用mAdapter.notifyItemRemoved(pos)，则删除没有动画效果，
+                        //且如果想让侧滑菜单同时关闭，需要同时调用 ((CstSwipeDelMenu) holder.itemView).quickClose();
+//                    mAdapter.notifyDataSetChanged();
+                    }
+                } else {
+                    Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        });
     }
 
     @OnClick({R.id.mLeftImg, R.id.layout0, R.id.layout1, R.id.layout2})
