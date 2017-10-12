@@ -116,7 +116,7 @@ public class SettingsActivity extends BaseActivity {
             public void onSuccess(Response<NetEntity<Void>> response) {
                 if (response.body().getCode() == Constants.NetCode.SUCCESS) {
                     Utils.startActivity(mContext,MainActivity.class);
-                    Utils.startActivity(mContext,LoginActivity.class);
+                    Utils.startActivity(mContext,LoginInActivity.class);
                     SPutils.save(mContext,"password","");
                     App.getUserInfo().setUserId("");
                     finish();

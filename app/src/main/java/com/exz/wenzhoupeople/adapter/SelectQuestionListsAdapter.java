@@ -42,9 +42,12 @@ public class SelectQuestionListsAdapter extends BaseItemDraggableAdapter<Enshrin
 
     private int i;
 
-    public SelectQuestionListsAdapter(int i) {
-        super(R.layout.item_enshrine, new ArrayList<EnshrineModel>());
+    public void setI(int i) {
         this.i = i;
+    }
+
+    public SelectQuestionListsAdapter() {
+        super(R.layout.item_enshrine, new ArrayList<EnshrineModel>());
     }
 
     @Override

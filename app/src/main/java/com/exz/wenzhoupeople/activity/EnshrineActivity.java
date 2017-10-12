@@ -114,12 +114,12 @@ public class EnshrineActivity extends BaseActivity implements SwipeRefreshLayout
     @Override
     public void init() throws Exception {
         super.init();
-        initView(0);
+        initView();
         initPort();
     }
 
 
-    private void initView(int i) {
+    private void initView() {
 
 
 //        list.add(new EnshrineModel());
@@ -128,7 +128,7 @@ public class EnshrineActivity extends BaseActivity implements SwipeRefreshLayout
 //        list.add(new EnshrineModel());
 //        list.add(new EnshrineModel());
 
-        adapter = new SelectQuestionListsAdapter(i);
+        adapter = new SelectQuestionListsAdapter();
         adapter.openLoadAnimation(BaseQuickAdapter.ALPHAIN);
         adapter.setLoadMoreView(new CustomLoadMoreView());
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -204,7 +204,7 @@ public class EnshrineActivity extends BaseActivity implements SwipeRefreshLayout
                 view1.setBackgroundColor(getResources().getColor(R.color.white));
                 text2.setTextColor(getResources().getColor(R.color.text_gray));
                 view2.setBackgroundColor(getResources().getColor(R.color.white));
-                initView(0);
+                adapter.setI(0);
                 state = "0";
                 onRefresh();
                 break;
@@ -215,7 +215,7 @@ public class EnshrineActivity extends BaseActivity implements SwipeRefreshLayout
                 view1.setBackgroundColor(getResources().getColor(R.color.blue2));
                 text2.setTextColor(getResources().getColor(R.color.text_gray));
                 view2.setBackgroundColor(getResources().getColor(R.color.white));
-                initView(1);
+                adapter.setI(1);
                 state = "1";
                 onRefresh();
                 break;
@@ -226,7 +226,7 @@ public class EnshrineActivity extends BaseActivity implements SwipeRefreshLayout
                 view1.setBackgroundColor(getResources().getColor(R.color.white));
                 text2.setTextColor(getResources().getColor(R.color.blue2));
                 view2.setBackgroundColor(getResources().getColor(R.color.blue2));
-                initView(2);
+                adapter.setI(2);
                 state = "2";
                 onRefresh();
                 break;

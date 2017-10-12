@@ -247,7 +247,7 @@ public class GoodsDetailActivity extends BaseActivity implements GoodsDetailFrag
     @Override
     public void onChoose() {
         if (!App.checkUserLogin()) {
-            Utils.startActivity(mContext, LoginActivity.class);
+            Utils.startActivity(mContext, LoginInActivity.class);
             return;
         }
         mGoodsDetailClassifyPop.showPopupWindow();
@@ -318,7 +318,7 @@ public class GoodsDetailActivity extends BaseActivity implements GoodsDetailFrag
                 break;
             case R.id.collect:
                 if (!App.checkUserLogin()) {
-                    Utils.startActivity(mContext, LoginActivity.class);
+                    Utils.startActivity(mContext, LoginInActivity.class);
                     return;
                 }
                 type = type.equals("0") ? "1" : "0";
@@ -349,14 +349,14 @@ public class GoodsDetailActivity extends BaseActivity implements GoodsDetailFrag
                 break;
             case R.id.gwc:
                 if (!App.checkUserLogin()) {
-                    Utils.startActivity(mContext, LoginActivity.class);
+                    Utils.startActivity(mContext, LoginInActivity.class);
                     return;
                 }
                 Utils.startActivity(mContext, GoodsCarActivity.class);
                 break;
             case R.id.addGWC:
 //                if (!App.checkUserLogin()) {
-//                    Utils.startActivity(mContext, LoginActivity.class);
+//                    Utils.startActivity(mContext, LoginInActivity.class);
 //                    return;
 //                }
                 mGoodsDetailClassifyPop.showPopupWindow();

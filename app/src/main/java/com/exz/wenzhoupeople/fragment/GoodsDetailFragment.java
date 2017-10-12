@@ -30,7 +30,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.xlhratingbar_lib.XLHRatingBar;
 import com.exz.wenzhoupeople.R;
-import com.exz.wenzhoupeople.activity.LoginActivity;
+import com.exz.wenzhoupeople.activity.LoginInActivity;
 import com.exz.wenzhoupeople.adapter.GoodsEvaluateAdapter;
 import com.exz.wenzhoupeople.appclication.App;
 import com.exz.wenzhoupeople.config.Urls;
@@ -279,7 +279,7 @@ public class GoodsDetailFragment extends MyBaseFragment {
         switch (view.getId()) {
             case R.id.getCoupon://领取优惠券
                 if (!App.checkUserLogin()) {
-                    Utils.startActivity(getContext(), LoginActivity.class);
+                    Utils.startActivity(getContext(), LoginInActivity.class);
                     return;
                 }
                 CouponList();

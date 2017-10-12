@@ -45,6 +45,7 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
 				DialogUtils.Warning(this, "支付成功");
 				break;
 		}
+		Log.e("WXPay","支付有了回调");
 		if (DialogUtils.dialog != null){
 			DialogUtils.dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
 				@Override

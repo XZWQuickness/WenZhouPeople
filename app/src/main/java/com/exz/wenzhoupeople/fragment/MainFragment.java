@@ -20,7 +20,7 @@ import com.exz.wenzhoupeople.R;
 import com.exz.wenzhoupeople.activity.DJMWActivity;
 import com.exz.wenzhoupeople.activity.FootPrintActivity;
 import com.exz.wenzhoupeople.activity.FreshSeafoodActivity;
-import com.exz.wenzhoupeople.activity.LoginActivity;
+import com.exz.wenzhoupeople.activity.LoginInActivity;
 import com.exz.wenzhoupeople.activity.MsgListActivity;
 import com.exz.wenzhoupeople.activity.OrderActivity;
 import com.exz.wenzhoupeople.activity.SeafoodListActivity;
@@ -133,14 +133,14 @@ public class MainFragment extends MyBaseFragment implements SwipeRefreshLayout.O
         switch (view.getId()) {
             case R.id.cuji://我的足迹
                 if(!App.checkUserLogin()){
-                    Utils.startActivity(getActivity(), LoginActivity.class);
+                    Utils.startActivity(getActivity(), LoginInActivity.class);
                     return;
                 }
                 Utils.startActivity(getActivity(), FootPrintActivity.class);
                 break;
             case R.id.jilu:
                 if(!App.checkUserLogin()){
-                    Utils.startActivity(getActivity(), LoginActivity.class);
+                    Utils.startActivity(getActivity(), LoginInActivity.class);
                     return;
                 }
                 intent = new Intent(getContext(), OrderActivity.class);
@@ -221,7 +221,7 @@ public class MainFragment extends MyBaseFragment implements SwipeRefreshLayout.O
         switch (view.getId()) {
             case R.id.msg:
                 if(!App.checkUserLogin()){
-                    Utils.startActivity(getContext(), LoginActivity.class);
+                    Utils.startActivity(getContext(), LoginInActivity.class);
                     return;
                 }
                 Utils.startActivity(getContext(), MsgListActivity.class);
