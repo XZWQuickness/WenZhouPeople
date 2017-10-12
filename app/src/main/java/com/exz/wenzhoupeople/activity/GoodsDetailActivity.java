@@ -63,6 +63,8 @@ public class GoodsDetailActivity extends BaseActivity implements GoodsDetailFrag
     TextView collect;
     @BindView(R.id.mScrollViewPager)
     ScrollViewPager viewPager;
+    @BindView(R.id.addGWC)
+    TextView addGWC;
     private MyPagerAdapter pagerAdapter;
     GoodsDetailFragment mGoodsDetailFragment;
     GoodsEvaluateFragment mGoodsEvaluateFragment;
@@ -171,6 +173,8 @@ public class GoodsDetailActivity extends BaseActivity implements GoodsDetailFrag
                         d = ContextCompat.getDrawable(mContext, R.mipmap.ic_goods_detail_star_blue);
                     }
                     collect.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d, null, null);
+                    addGWC.setBackgroundColor(ContextCompat.getColor(mContext,response.body().getData().getIsDelete().equals("1")?R.color.text_gray:R.color.blue2));
+                    addGWC.setClickable(!response.body().getData().getIsDelete().equals("1"));
                 }
             }
 
