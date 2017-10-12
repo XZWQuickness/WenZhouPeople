@@ -11,7 +11,7 @@ public class EvaluateModel {
 
     /**
      * id : 6
-     * imgUrl : http://qxw1649650091.my3w.com/UploadFiles/goods/2017091416262482435298_thum_220.jpg
+     * imgUrl : http://ht.wzxcth.com/UploadFiles/goods/2017091416262482435298_thum_220.jpg
      * title : 八爪鱼干
      * images : [""]
      * content : %E5%85%AB%E6%8A%98%E6%8A%93

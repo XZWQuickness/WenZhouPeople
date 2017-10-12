@@ -13,6 +13,7 @@ import cn.com.szw.lib.myframework.utils.net.NetEntity
 import cn.com.szw.lib.myframework.utils.net.callback.DialogCallback
 import com.alipay.sdk.app.PayTask
 import com.blankj.utilcode.util.EncryptUtils
+import com.exz.wenzhoupeople.config.Constants
 import com.exz.wenzhoupeople.config.Urls
 import com.lzy.okgo.OkGo
 import com.lzy.okgo.model.Response
@@ -21,6 +22,7 @@ import com.tencent.mm.opensdk.openapi.WXAPIFactory
 import io.reactivex.Flowable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import org.jetbrains.anko.toast
 import java.util.*
 
 
@@ -54,24 +56,28 @@ abstract class PayActivity : BaseActivity() {
                 .execute(object : DialogCallback<NetEntity<WxBean>>(this) {
 
                     override fun onSuccess(response: Response<NetEntity<WxBean>>) {
-                        if (response.body().data != null) {
+                        if (response.body().code == Constants.NetCode.SUCCESS) {
+                            if (response.body().data != null) {
 
-                            rechargeOrderId = response.body().data.rechargeOrderId
-                            val req = PayReq()
-                            req.appId = response.body().data.appId
-                            Urls.APP_ID = response.body().data.appId
-                            req.partnerId = response.body().data.partnerId
-                            req.prepayId = response.body().data.prepayId
-                            req.packageValue = response.body().data.packageValue
-                            req.nonceStr = response.body().data.nonceStr
-                            req.timeStamp = response.body().data.timeStamp
-                            req.sign = response.body().data.sign
-                            if (!isWXAppInstalledAndSupported) {
-                                Toast.makeText(this@PayActivity, "没安装微信客户端", Toast.LENGTH_SHORT).show()
-                                return
+                                rechargeOrderId = response.body().data.rechargeOrderId
+                                val req = PayReq()
+                                req.appId = response.body().data.appId
+                                Urls.APP_ID = response.body().data.appId
+                                req.partnerId = response.body().data.partnerId
+                                req.prepayId = response.body().data.prepayId
+                                req.packageValue = response.body().data.packageValue
+                                req.nonceStr = response.body().data.nonceStr
+                                req.timeStamp = response.body().data.timeStamp
+                                req.sign = response.body().data.sign
+                                if (!isWXAppInstalledAndSupported) {
+                                    Toast.makeText(this@PayActivity, "没安装微信客户端", Toast.LENGTH_SHORT).show()
+                                    return
+                                }
+                                msgApi.registerApp(response.body().data.appId)
+                                msgApi.sendReq(req)
                             }
-                            msgApi.registerApp(response.body().data.appId)
-                            msgApi.sendReq(req)
+                        } else {
+                            toast(response.body().message)
                         }
                     }
                 })
@@ -90,11 +96,16 @@ abstract class PayActivity : BaseActivity() {
                 .params(map)
                 .execute(object : DialogCallback<NetEntity<AliBean>>(this) {
                     override fun onSuccess(response: Response<NetEntity<AliBean>>) {
-                        if (response.body().data != null) {
-                            rechargeOrderId = response.body().data.rechargeOrderId
-                            pay(response.body().data.payDescription, response.body().data.sign)
+                        if (response.body().code == Constants.NetCode.SUCCESS) {
+                            if (response.body().data != null) {
+                                rechargeOrderId = response.body().data.rechargeOrderId
+                                pay(response.body().data.payDescription, response.body().data.sign)
+                            }
+                        } else {
+                            toast(response.body().message)
                         }
                     }
+
                 })
 
     }

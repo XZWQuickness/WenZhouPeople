@@ -362,7 +362,21 @@
         <meta-data
             android:name="JPUSH_APPKEY"
             android:value="c7a87562018d9ead836b07aa" /> <!--  </>值来自开发者平台取得的AppKey-->
+        <!-- aliPay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
 
+        <!--支付  end -->
+        <!-- 微信支付 begin -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <!--微信支付  end -->
 
         <!--极光推送-->
     </application>
