@@ -135,8 +135,12 @@ public class EvaluateActivity extends BaseActivity implements SwipeRefreshLayout
 
                     @Override
                     public void onSuccess(Response<NetEntity<List<EvaluateModel>>> response) {
-                        refresh.setEnabled(true);
-                        refresh.setRefreshing(false);
+                        try {
+                            refresh.setEnabled(true);
+                            refresh.setRefreshing(false);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
 
                         if (response.body().getCode() == cn.com.szw.lib.myframework.config.Constants.NetCode.SUCCESS) {
                             if (refreshState == cn.com.szw.lib.myframework.config.Constants.RefreshState.STATE_REFRESH) {
@@ -146,7 +150,7 @@ public class EvaluateActivity extends BaseActivity implements SwipeRefreshLayout
                                 adapter.addData(response.body().getData());
                             }
 
-                            if (response.body().getData().isEmpty()) {
+                            if (!response.body().getData().isEmpty()) {
                                 adapter.loadMoreComplete();
                                 page++;
                             } else {
@@ -159,10 +163,14 @@ public class EvaluateActivity extends BaseActivity implements SwipeRefreshLayout
                     @Override
                     public void onError(Response<NetEntity<List<EvaluateModel>>> response) {
                         super.onError(response);
-                        refresh.setEnabled(true);
-                        refresh.setRefreshing(false);
-                        Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                        adapter.loadMoreFail();
+                        try {
+                            refresh.setEnabled(true);
+                            refresh.setRefreshing(false);
+                            Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                            adapter.loadMoreFail();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                 });
     }

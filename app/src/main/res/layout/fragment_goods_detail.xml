@@ -117,48 +117,6 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/white"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:drawablePadding="@dimen/dp_10"
-                        android:drawableStart="@mipmap/ic_goods_detail_zpbz"
-                        android:gravity="center_vertical"
-                        android:padding="15dp"
-                        android:text="正品保障"
-                        android:textColor="@color/text_gray"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:drawablePadding="@dimen/dp_10"
-                        android:drawableStart="@mipmap/ic_goods_detail_24"
-                        android:gravity="center_vertical"
-                        android:text="24小时发货"
-                        android:textColor="@color/text_gray"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:drawablePadding="@dimen/dp_10"
-                        android:drawableStart="@mipmap/ic_goods_detail_rsms"
-                        android:gravity="center_vertical"
-                        android:padding="15dp"
-                        android:text="如实描述"
-                        android:textColor="@color/text_gray"
-                        android:textSize="14sp" />
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"

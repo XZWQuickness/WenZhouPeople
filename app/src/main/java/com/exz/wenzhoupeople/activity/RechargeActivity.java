@@ -2,6 +2,7 @@ package com.exz.wenzhoupeople.activity;
 
 import android.support.annotation.IdRes;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -153,9 +154,14 @@ public class RechargeActivity extends PayActivityAccount {
                 break;
             case R.id.btn_login:
 
-                int i = Integer.parseInt(money.getText().toString());
+                int i = 0;
+                try {
+                    i = Integer.parseInt(money.getText().toString());
+                } catch (NumberFormatException e) {
+                    e.printStackTrace();
+                }
 
-                if (money.getText().toString().equals("")) {
+                if (TextUtils.isEmpty(money.getText())) {
 
                     Toast.makeText(mContext, "请输入充值金额", Toast.LENGTH_SHORT).show();
                 } else if (i<10) {

@@ -63,6 +63,8 @@ public class GoodsDetailActivity extends BaseActivity implements GoodsDetailFrag
     TextView collect;
     @BindView(R.id.mScrollViewPager)
     ScrollViewPager viewPager;
+    @BindView(R.id.addGWC)
+    TextView addGWC;
     private MyPagerAdapter pagerAdapter;
     GoodsDetailFragment mGoodsDetailFragment;
     GoodsEvaluateFragment mGoodsEvaluateFragment;
@@ -171,6 +173,8 @@ public class GoodsDetailActivity extends BaseActivity implements GoodsDetailFrag
                         d = ContextCompat.getDrawable(mContext, R.mipmap.ic_goods_detail_star_blue);
                     }
                     collect.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d, null, null);
+                    addGWC.setBackgroundColor(ContextCompat.getColor(mContext,response.body().getData().getIsDelete().equals("1")?R.color.text_gray:R.color.blue2));
+                    addGWC.setClickable(!response.body().getData().getIsDelete().equals("1"));
                 }
             }
 
@@ -243,7 +247,7 @@ public class GoodsDetailActivity extends BaseActivity implements GoodsDetailFrag
     @Override
     public void onChoose() {
         if (!App.checkUserLogin()) {
-            Utils.startActivity(mContext, LoginActivity.class);
+            Utils.startActivity(mContext, LoginInActivity.class);
             return;
         }
         mGoodsDetailClassifyPop.showPopupWindow();
@@ -314,7 +318,7 @@ public class GoodsDetailActivity extends BaseActivity implements GoodsDetailFrag
                 break;
             case R.id.collect:
                 if (!App.checkUserLogin()) {
-                    Utils.startActivity(mContext, LoginActivity.class);
+                    Utils.startActivity(mContext, LoginInActivity.class);
                     return;
                 }
                 type = type.equals("0") ? "1" : "0";
@@ -345,14 +349,14 @@ public class GoodsDetailActivity extends BaseActivity implements GoodsDetailFrag
                 break;
             case R.id.gwc:
                 if (!App.checkUserLogin()) {
-                    Utils.startActivity(mContext, LoginActivity.class);
+                    Utils.startActivity(mContext, LoginInActivity.class);
                     return;
                 }
                 Utils.startActivity(mContext, GoodsCarActivity.class);
                 break;
             case R.id.addGWC:
 //                if (!App.checkUserLogin()) {
-//                    Utils.startActivity(mContext, LoginActivity.class);
+//                    Utils.startActivity(mContext, LoginInActivity.class);
 //                    return;
 //                }
                 mGoodsDetailClassifyPop.showPopupWindow();

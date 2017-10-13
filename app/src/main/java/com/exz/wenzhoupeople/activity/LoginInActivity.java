@@ -51,7 +51,7 @@ import static com.exz.wenzhoupeople.config.Urls.ThirdLogin;
  * Created by pc on 2017/8/21.
  */
 
-public class LoginActivity extends BaseActivity implements android.os.Handler.Callback, PlatformActionListener {
+public class LoginInActivity extends BaseActivity implements android.os.Handler.Callback, PlatformActionListener {
     @BindView(R.id.mTitle)
     TextView mTitle;
     @BindView(R.id.mRight)
@@ -158,7 +158,7 @@ public class LoginActivity extends BaseActivity implements android.os.Handler.Ca
                 //测试时，需要打包签名；sample测试时，用项目里面的demokey.keystore
                 //打包签名apk,然后才能产生微信的登录
                 if (!isWXAppInstalledAndSupported()) {
-                    Toast.makeText(LoginActivity.this, "没安装微信客户端", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginInActivity.this, "没安装微信客户端", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 type = "1";

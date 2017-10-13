@@ -1,5 +1,6 @@
 package com.exz.wenzhoupeople.adapter;
 
+import android.content.Intent;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,12 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.com.szw.lib.myframework.imageloder.GlideApp;
+import cn.com.szw.lib.myframework.utils.preview.PreviewActivity;
+
+import static cn.com.szw.lib.myframework.utils.preview.PreviewActivity.PREVIEW_INTENT_IMAGES;
+import static cn.com.szw.lib.myframework.utils.preview.PreviewActivity.PREVIEW_INTENT_IS_CAN_DELETE;
+import static cn.com.szw.lib.myframework.utils.preview.PreviewActivity.PREVIEW_INTENT_POSITION;
+import static cn.com.szw.lib.myframework.utils.preview.PreviewActivity.PREVIEW_INTENT_SHOW_NUM;
 
 
 /**
@@ -37,7 +44,7 @@ public class PicAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
 
 
     @Override
-    protected void convert(BaseViewHolder helper, final String item) {
+    protected void convert(final BaseViewHolder helper, final String item) {
         ButterKnife.bind(this, helper.itemView);
 
         ViewGroup.LayoutParams layoutParams = photo.getLayoutParams();
@@ -57,5 +64,17 @@ public class PicAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
         }else{
             photo.setVisibility(View.VISIBLE);
         }
+        photo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ArrayList<String> list = (ArrayList<String>) getData();
+                Intent intent = new Intent(mContext, PreviewActivity.class);
+                intent.putExtra(PREVIEW_INTENT_POSITION, helper.getAdapterPosition());
+                intent.putExtra(PREVIEW_INTENT_SHOW_NUM, true);
+                intent.putExtra(PREVIEW_INTENT_IMAGES, list);
+                intent.putExtra(PREVIEW_INTENT_IS_CAN_DELETE, false);
+                mContext.startActivity(intent);
+            }
+        });
     }
 }

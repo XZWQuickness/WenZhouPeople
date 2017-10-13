@@ -93,7 +93,6 @@ public class TakeGoodsAddressActivity extends BaseActivity {
 
     private void initView() {
         refresh.setEnabled(false);
-        refresh.setRefreshing(false);
         className = getIntent().getStringExtra("className");
         adapter = new TakeGoodsAddressAdapter(className);
         adapter.setLoadMoreView(new CustomLoadMoreView());
@@ -141,8 +140,6 @@ public class TakeGoodsAddressActivity extends BaseActivity {
         OkGo.<NetEntity<List<TakeGoodsAddressEntity>>>post(Urls.AddressList).params(map).tag(this).execute(new DialogCallback<NetEntity<List<TakeGoodsAddressEntity>>>(mContext) {
             @Override
             public void onSuccess(Response<NetEntity<List<TakeGoodsAddressEntity>>> response) {
-                refresh.setEnabled(true);
-                refresh.setRefreshing(false);
                 if (response.body().getCode() == Constants.NetCode.SUCCESS) {
                     if (refreshState == Constants.RefreshState.STATE_REFRESH) {
                         adapter.setNewData(response.body().getData());
@@ -164,8 +161,6 @@ public class TakeGoodsAddressActivity extends BaseActivity {
             @Override
             public void onError(Response<NetEntity<List<TakeGoodsAddressEntity>>> response) {
                 super.onError(response);
-                refresh.setEnabled(true);
-                refresh.setRefreshing(false);
                 adapter.setNewData(JSON.parseArray("[\n" +
                         "    {\n" +
                         "        \"id\": \"id\",\n" +

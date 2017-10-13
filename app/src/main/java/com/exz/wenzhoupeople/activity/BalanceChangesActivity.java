@@ -151,7 +151,7 @@ public class BalanceChangesActivity extends BaseActivity implements SwipeRefresh
                                 adapter.addData(response.body().getData());
                             }
 
-                            if (response.body().getData().isEmpty()) {
+                            if (!response.body().getData().isEmpty()) {
                                 adapter.loadMoreComplete();
                                 page++;
                             } else {

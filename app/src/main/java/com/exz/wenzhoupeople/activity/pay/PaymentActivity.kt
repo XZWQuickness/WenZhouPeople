@@ -218,7 +218,7 @@ class PaymentActivity : PayActivity(), View.OnClickListener {
 
                     override fun onSuccess(response: Response<NetEntity<CheckPayBean>>) {
                         if (response.body().code == Constants.NetCode.SUCCESS) {
-                            if (response.body().data.payState == "3") {
+                            if (response.body().data.payState == "1") {
                                 payPrice = response.body().data.payMoney
                                 val intent = Intent(mContext, PaySuccessActivity::class.java)
                                 startActivity(intent)

@@ -19,7 +19,7 @@ import com.blankj.utilcode.util.EncryptUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.exz.wenzhoupeople.R;
 import com.exz.wenzhoupeople.activity.ConfirmOrderActivity;
-import com.exz.wenzhoupeople.activity.LoginActivity;
+import com.exz.wenzhoupeople.activity.LoginInActivity;
 import com.exz.wenzhoupeople.adapter.GoodsDetailClassifyAdapter;
 import com.exz.wenzhoupeople.appclication.App;
 import com.exz.wenzhoupeople.entity.GoodsClassifyBean;
@@ -254,7 +254,7 @@ public class GoodsDetailClassifyPop extends BasePopupWindow implements OnNumList
                 break;
             case R.id.addCar://加入购物车
                 if (!App.checkUserLogin()) {
-                    Utils.startActivity(getContext(), LoginActivity.class);
+                    Utils.startActivity(getContext(), LoginInActivity.class);
                     return;
                 }
                 if (Integer.parseInt(data.getStock()) < 1) {
@@ -269,7 +269,7 @@ public class GoodsDetailClassifyPop extends BasePopupWindow implements OnNumList
                 break;
             case R.id.buy://购买
                 if (!App.checkUserLogin()) {
-                    Utils.startActivity(getContext(), LoginActivity.class);
+                    Utils.startActivity(getContext(), LoginInActivity.class);
                     return;
                 }
                 if (TextUtils.isEmpty(data.getSkuid())) {

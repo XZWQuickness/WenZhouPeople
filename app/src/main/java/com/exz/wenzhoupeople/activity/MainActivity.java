@@ -79,7 +79,7 @@ public class MainActivity extends BaseActivity {
                     if (position == 1 || position == 2) {
                         if (App.getLoginUserId().equals("")) {
                             mainTabBar.setCurrentTab(0);
-                            Utils.startActivity(mContext, LoginActivity.class);
+                            Utils.startActivity(mContext, LoginInActivity.class);
 
                         }
                     }

@@ -15,7 +15,7 @@ import com.exz.wenzhoupeople.activity.DiscountCouponActivity;
 import com.exz.wenzhoupeople.activity.EnshrineActivity;
 import com.exz.wenzhoupeople.activity.EvaluateActivity;
 import com.exz.wenzhoupeople.activity.FootPrintActivity;
-import com.exz.wenzhoupeople.activity.LoginActivity;
+import com.exz.wenzhoupeople.activity.LoginInActivity;
 import com.exz.wenzhoupeople.activity.MsgListActivity;
 import com.exz.wenzhoupeople.activity.MyAccountActivity;
 import com.exz.wenzhoupeople.activity.MyInfoActivity;
@@ -148,7 +148,7 @@ public class MineFragment extends MyBaseFragment {
                 break;
             case R.id.msg:
                 if(!App.checkUserLogin()){
-                    Utils.startActivity(getContext(), LoginActivity.class);
+                    Utils.startActivity(getContext(), LoginInActivity.class);
                     return;
                 }
                 Utils.startActivity(getContext(), MsgListActivity.class);
