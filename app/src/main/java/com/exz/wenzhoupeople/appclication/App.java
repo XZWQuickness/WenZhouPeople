@@ -2,6 +2,7 @@ package com.exz.wenzhoupeople.appclication;
 
 
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.support.multidex.MultiDex;
 
 import com.exz.wenzhoupeople.entity.User;
@@ -9,6 +10,7 @@ import com.exz.wenzhoupeople.greendao.gen.DaoMaster;
 import com.exz.wenzhoupeople.greendao.gen.DaoSession;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.mob.MobSDK;
+import com.qihoo.appstore.common.updatesdk.lib.UpdateHelper;
 
 import cat.ereza.customactivityoncrash.CustomActivityOnCrash;
 import cn.com.szw.lib.myframework.app.MyApplication;
@@ -25,10 +27,11 @@ public class App extends MyApplication {
     private DaoMaster mDaoMaster;
     private DaoSession mDaoSession;
     private static App application;
+
     @Override
     public void onCreate() {
         super.onCreate();
-        salt="9E127A4F0BAB43B3";
+        salt = "9E127A4F0BAB43B3";
         application = this;
         MultiDex.install(this);
         com.blankj.utilcode.util.Utils.init(this);
@@ -38,6 +41,22 @@ public class App extends MyApplication {
         JPushInterface.init(this);
         MobSDK.init(getApplicationContext(), "1f3e9ba83f879", "1b7617b3297b6df104520345c1158de7");
         setDatabase();
+
+
+        UpdateHelper.getInstance().init(getApplicationContext(), Color.parseColor("#0A93DB"));
+        UpdateHelper.getInstance().autoUpdate(getPackageName(), false, 120000);
+
+//        BDAutoUpdateSDK.uiUpdateAction(getApplicationContext(), new UICheckUpdateCallback() {
+//            @Override
+//            public void onNoUpdateFound() {
+//
+//            }
+//
+//            @Override
+//            public void onCheckComplete() {
+//
+//            }
+//        });
     }
 
     @Override
