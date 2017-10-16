@@ -90,6 +90,77 @@
             </intent-filter>
         </activity>
 
+
+
+
+
+
+
+
+
+
+
+        <activity
+        android:name="com.qihoo.appstore.common.updatesdk.lib.UpdateTipDialogActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:exported="false"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <service
+        android:name="com.qihoo.appstore.updatelib.CheckUpdateService"
+        android:exported="false" />
+
+
+        <!--<meta-data-->
+            <!--android:name="BDAPPID"-->
+            <!--android:value="10235504" />-->
+        <!--<meta-data-->
+            <!--android:name="BDAPPKEY"-->
+            <!--android:value="z8GAKHUe6fG2UyiwkIS9uHDlErbcrzss" />-->
+
+        <!--&lt;!&ndash;其中 metadata 中需要填写的 AppId 和 AppKey，请向开发者平台申请。&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;同时在 application 节点下增加<provider>节点如下：&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;<!—需将“com.your.domain”替换为实际包名 &ndash;&gt;&ndash;&gt;-->
+        <!--<provider-->
+            <!--android:name="android.support.v4.content.FileProvider"-->
+            <!--android:authorities="cn.com.exz.beefrog.fileprovider"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true">-->
+
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/bdp_update_filepaths" />-->
+
+        <!--</provider>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- 首页 -->
         <activity
             android:name=".activity.MainActivity"
